@@ -1,0 +1,35 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+
+                    $active_group = 'default';
+                    $active_record = true;
+                    $db['default']['hostname'] = 'localhost';
+                    $db['default']['username'] = 'hbxerochat';
+                    $db['default']['password'] = 'lDR267MEt0XXdn6D';
+                    $db['default']['database'] = 'hbxerochat';
+                    $db['default']['dbdriver'] = 'mysqli';
+                    $db['default']['dbprefix'] = '';
+                    $db['default']['pconnect'] = FALSE;
+                    $db['default']['db_debug'] = TRUE;
+                    $db['default']['cache_on'] = FALSE;
+                    $db['default']['cachedir'] = '';
+                    $db['default']['char_set'] = 'utf8';
+                    $db['default']['dbcollat'] = 'utf8_general_ci';
+                    $db['default']['swap_pre'] = '';
+                    $db['default']['autoinit'] = TRUE;
+                    $db['default']['stricton'] = FALSE;
+
+                    $db['signuplist']['hostname'] = 'localhost';
+                    $db['signuplist']['username'] = 'hbxerochat';
+                    $db['signuplist']['password'] = 'lDR267MEt0XXdn6D';
+                    $db['signuplist']['database'] = 'signuplist';
+                    $db['signuplist']['dbdriver'] = 'mysqli';
+                    $db['signuplist']['dbprefix'] = '';
+                    $db['signuplist']['pconnect'] = FALSE;
+                    $db['signuplist']['db_debug'] = TRUE;
+                    $db['signuplist']['cache_on'] = FALSE;
+                    $db['signuplist']['cachedir'] = '';
+                    $db['signuplist']['char_set'] = 'utf8';
+                    $db['signuplist']['dbcollat'] = 'utf8_general_ci';
+                    $db['signuplist']['swap_pre'] = '';
+                    $db['signuplist']['autoinit'] = TRUE;
+                    $db['signuplist']['stricton'] = FALSE;                    

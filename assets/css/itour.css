@@ -1,0 +1,655 @@
+﻿/* ====================== */
+/* == Base itour Style == */
+/* ====================== */
+.hWrap,
+.hWrap * {
+    box-sizing: border-box;
+}
+.noTransition {
+	-webkit-transition: all 0s ease 0s !important;
+	-moz-transition: all 0s ease 0s !important;
+	-ms-transition: all 0s ease 0s !important;
+	-o-transition: all 0s ease 0s !important;
+	transition: all 0s ease 0s !important;
+}
+.hOverlay {
+	position:fixed;
+	z-index:999998;
+	background-color:#000;
+	opacity:0;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.hOverlayDisable {
+	z-index:999997;
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display:none;
+}
+.hOverlayDisable.hOverlayDisableTrue {
+	display:block;
+}
+.bms .hOverlay {
+	-webkit-transition: all 0s ease 0s !important;
+	-moz-transition: all 0s ease 0s !important;
+	-ms-transition: all 0s ease 0s !important;
+	-o-transition: all 0s ease 0s !important;
+	transition: all 0s ease 0s !important;
+}
+.hContBlock {
+	position:absolute;
+	color:#333;
+	width:320px;
+	max-width:calc(100vw - 10px) !important;
+	font:16px/20px Arial, Helvetica, sans-serif;
+	background-color:#fff;
+	border-radius:2px;
+	overflow:hidden;
+	z-index:10;
+}
+.hContBody {
+	padding:0 16px 16px 16px;
+	margin-top:16px;
+
+	
+
+}
+.hContHeader {
+	font:700 20px/1.2em Arial, Helvetica, sans-serif;
+	overflow:hidden;
+	padding:16px 16px 0 16px;
+	margin-bottom:16px;
+	word-wrap: break-word;
+}
+.hContFooter {
+	overflow:hidden;
+	padding:0 8px;
+	box-shadow:inset 0 1px 0 rgba(0,0,0,0.1);
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	-o-transform: translateZ(0);
+	transform: translateZ(0);
+}
+.hContFooter .hPrev {
+	float:left;
+}
+.hContFooter .hNext {
+	float:left;
+}
+.hContPos {
+	width:0;
+	left:-1000px;
+	top:0;
+	height:0;
+	position:fixed;
+	z-index:999999;
+}
+.hContPos:after {
+	content:'';
+	width:0;
+	height:0;
+	border-width:10px;
+	border-color:#fff;
+	border-style:solid;
+	position:absolute;
+	top:50%;
+	left:50%;
+	-webkit-transform:translate(-50%,-50%) rotate(45deg);
+	-moz-transform:translate(-50%,-50%) rotate(45deg);
+	-ms-transform:translate(-50%,-50%) rotate(45deg);
+	-o-transform:translate(-50%,-50%) rotate(45deg);
+	transform:translate(-50%,-50%) rotate(45deg);
+}
+.hStepItem.hElAbsent {
+	color:#f00
+}
+
+/* =========================== */
+/* == Message in center of screen == */
+/* =========================== */
+[data-pos="c"][data-cone="c"][data-cont="c"] {
+	width:320px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	height:auto;
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	transform:translate(-50%,-50%);
+}
+[data-pos="c"][data-cone="c"][data-cont="c"]:after {
+	display:none;
+}
+[data-pos="c"][data-cone="c"][data-cont="c"] .hContBlock {
+	/*width:100%;*/
+	margin:0 5px;
+	left:0;
+	top:0;
+	position:relative;
+}
+.hContImage img,
+.hContBody img { width:100%;}
+
+
+/* =========================== */
+/* == Message in right side == */
+/* =========================== */
+[data-pos="r"][data-cone="b"][data-cont="t"]:after,
+[data-pos="r"][data-cone="t"][data-cont="t"]:after,
+[data-pos="r"][data-cone="c"][data-cont="t"]:after{
+	border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+[data-pos="r"][data-cone="b"][data-cont="b"]:after,
+[data-pos="r"][data-cone="t"][data-cont="b"]:after,
+[data-pos="r"][data-cone="c"][data-cont="b"]:after {
+	border-left-color: transparent;
+    border-top-color: transparent;
+}
+[data-pos="r"][data-cont="c"] .hContBlock {
+	top:50%;
+	left:0;
+	-webkit-transform:translate(0,-50%);
+	-moz-transform:translate(0,-50%);
+	-ms-transform:translate(0,-50%);
+	-o-transform:translate(0,-50%);
+	transform:translate(0,-50%);
+}
+[data-pos="r"][data-cont="b"] .hContBlock {
+	top:0;
+	left:0;
+	-webkit-transform:translate(0,0);
+	-moz-transform:translate(0,0);
+	-ms-transform:translate(0,0);
+	-o-transform:translate(0,0);
+	transform:translate(0,0);
+}
+[data-pos="r"][data-cont="t"] .hContBlock {
+	top:0;
+	left:0;
+	-webkit-transform:translate(0,-100%);
+	-moz-transform:translate(0,-100%);
+	-ms-transform:translate(0,-100%);
+	-o-transform:translate(0,-100%);
+	transform:translate(0,-100%);
+}
+
+/* ========================== */
+/* == Message in left side == */
+/* ========================== */
+[data-pos="l"][data-cone="b"][data-cont="t"]:after,
+[data-pos="l"][data-cone="t"][data-cont="t"]:after,
+[data-pos="l"][data-cone="c"][data-cont="t"]:after{
+	border-right-color: transparent;
+    border-bottom-color: transparent;
+}
+[data-pos="l"][data-cone="b"][data-cont="b"]:after,
+[data-pos="l"][data-cone="t"][data-cont="b"]:after,
+[data-pos="l"][data-cone="c"][data-cont="b"]:after {
+	border-left-color: transparent;
+    border-top-color: transparent;
+}
+[data-pos="l"][data-cont="c"] .hContBlock {
+	top:50%;
+	left:0;
+	-webkit-transform:translate(-100%,-50%);
+	-moz-transform:translate(-100%,-50%);
+	-ms-transform:translate(-100%,-50%);
+	-o-transform:translate(-100%,-50%);
+	transform:translate(-100%,-50%);
+}
+[data-pos="l"][data-cont="b"] .hContBlock {
+	top:0;
+	left:0;
+	-webkit-transform:translate(-100%,0);
+	-moz-transform:translate(-100%,0);
+	-ms-transform:translate(-100%,0);
+	-o-transform:translate(-100%,0);
+	transform:translate(-100%,0);
+}
+[data-pos="l"][data-cont="t"] .hContBlock {
+	top:0;
+	left:0;
+	-webkit-transform:translate(-100%,-100%);
+	-moz-transform:translate(-100%,-100%);
+	-ms-transform:translate(-100%,-100%);
+	-o-transform:translate(-100%,-100%);
+	transform:translate(-100%,-100%);
+}
+
+/* ============================ */
+/* == Message in bottom side == */
+/* ============================ */
+[data-pos="b"][data-cone="l"][data-cont="l"]:after,
+[data-pos="b"][data-cone="r"][data-cont="l"]:after,
+[data-pos="b"][data-cone="c"][data-cont="l"]:after{
+	border-right-color: transparent;
+    border-top-color: transparent;
+}
+[data-pos="b"][data-cone="l"][data-cont="r"]:after,
+[data-pos="b"][data-cone="r"][data-cont="r"]:after,
+[data-pos="b"][data-cone="c"][data-cont="r"]:after {
+	border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+[data-pos="b"][data-cont="c"] .hContBlock {
+	left:50%;
+	top:0;
+	-webkit-transform:translate(-50%,0);
+	-moz-transform:translate(-50%,0);
+	-ms-transform:translate(-50%,0);
+	-o-transform:translate(-50%,0);
+	transform:translate(-50%,0);
+}
+[data-pos="b"][data-cont="l"] .hContBlock {
+	top:0;
+	left:0;
+	-webkit-transform:translate(-100%,0);
+	-moz-transform:translate(-100%,0);
+	-ms-transform:translate(-100%,0);
+	-o-transform:translate(-100%,0);
+	transform:translate(-100%,0);
+}
+[data-pos="b"][data-cont="r"] .hContBlock {
+	top:0;
+	left:0;
+	-webkit-transform:translate(0,0);
+	-moz-transform:translate(0,0);
+	-ms-transform:translate(0,0);
+	-o-transform:translate(0,0);
+	transform:translate(0,0);
+}
+
+/* ========================= */
+/* == Message in top side == */
+/* ========================= */
+[data-pos="t"][data-cone="l"][data-cont="l"]:after,
+[data-pos="t"][data-cone="r"][data-cont="l"]:after,
+[data-pos="t"][data-cone="c"][data-cont="l"]:after{
+	border-right-color: transparent;
+    border-top-color: transparent;
+}
+[data-pos="t"][data-cone="l"][data-cont="r"]:after,
+[data-pos="t"][data-cone="r"][data-cont="r"]:after,
+[data-pos="t"][data-cone="c"][data-cont="r"]:after {
+	border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+[data-pos="t"][data-cont="c"] .hContBlock {
+	left:50%;
+	top:0;
+	-webkit-transform:translate(-50%,-100%);
+	-moz-transform:translate(-50%,-100%);
+	-ms-transform:translate(-50%,-100%);
+	-o-transform:translate(-50%,-100%);
+	transform:translate(-50%,-100%);
+}
+[data-pos="t"][data-cont="l"] .hContBlock {
+	top:0;
+	left:0;
+	-webkit-transform:translate(-100%,-100%);
+	-moz-transform:translate(-100%,-100%);
+	-ms-transform:translate(-100%,-100%);
+	-o-transform:translate(-100%,-100%);
+	transform:translate(-100%,-100%);
+}
+[data-pos="t"][data-cont="r"] .hContBlock {
+	top:0;
+	left:0;
+	-webkit-transform:translate(0,-100%);
+	-moz-transform:translate(0,-100%);
+	-ms-transform:translate(0,-100%);
+	-o-transform:translate(0,-100%);
+	transform:translate(0,-100%);
+}
+
+
+
+
+
+
+
+/* =================== */
+/* == Buttons style == */
+/* =================== */
+.hBtn {
+	background: rgba(0, 0, 0, 0);
+    border: medium none;
+    border-radius: 2px;
+    color: #3f51b5;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    height: 36px;
+    letter-spacing: 0;
+    line-height: 36px;
+    margin: 0;
+    outline: medium none;
+    overflow: hidden;
+    padding: 0 8px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+	-webkit-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+	-moz-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+	-ms-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+	-o-transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+	transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1) 0s, background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    vertical-align: middle;
+    will-change: box-shadow;
+}
+.hBtn:hover {
+	background: rgba(0, 0, 0, 0.1);
+}
+.hBtn:active {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+/* ================= */
+/* == Message box == */
+/* ================= */
+.hContFooter .hBtn {
+	margin-top:8px;
+	margin-bottom:8px;
+}
+.hContPos ul {
+	list-style-position:inside;
+	margin:10px 0;
+	padding:0;
+	
+}
+.hNavHeader {
+	white-space:nowrap;
+	border-bottom:1px solid rgba(0,0,0,0.1);
+	overflow:hidden;
+	text-overflow:ellipsis;
+	font: 20px/52px arial;
+    padding: 0 16px;
+}
+.hNavHeader + .hNavWrap {
+	top:52px;
+}
+.hNavWrap {
+	top:0;
+	bottom:52px;
+	position:absolute;
+	width:100%;
+	max-height:100%;
+	overflow:hidden;
+	overflow-y:auto;
+}
+
+/* =============================== */
+/* == Steps List Box (Tour Map) == */
+/* =============================== */
+.hNavPos {
+	position:fixed;
+	top:50px;
+	bottom:50px;
+	width:260px;
+	background-color:#fff;
+	color:#333;
+	z-index:9999999;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	border-radius:2px;
+	overflow:hidden;
+	overflow-y:auto;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.hNavPos-right {
+	right:0;
+	transform:translateX(101%);
+}
+.hNavPos-left {
+	left:0;
+	transform:translateX(-101%);
+}
+.hNavOpen .hNavPos {
+	display:block;
+	transform:translateX(0);
+}
+.hNavAction {
+	padding:8px;
+	border-top:1px solid rgba(0,0,0,0.1);
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	white-space:nowrap;
+}
+.hStepItem{
+	color: rgba(0, 0, 0, 0.87);
+    flex-flow: row nowrap;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    min-height: 48px;
+    overflow: hidden;
+    padding: 16px 16px 16px 50px;
+	cursor:pointer;
+	width:100%;
+	clear:both;
+	position:relative;
+	display:block;
+}
+.hStepItem:after,
+.hStepItem:before {
+	content:'';
+	position:absolute;
+	top:14px;
+	left:22px;
+	width:2px;
+	font-size:0;
+	line-height:0;
+	background-color:rgba(0,0,0,0.1);
+}
+
+
+
+
+.hStepItem.hSuccess:after,
+.hStepItem.hSuccess:before {
+	background-color:#3C0;
+}
+.hStepItem:after {
+	height:8px;
+	transform-origin:right bottom;
+	transform:rotate(-45deg);
+	margin-top:8px;
+}
+.hStepItem:before {
+	height:16px;
+	transform-origin:left bottom;
+	transform:rotate(45deg);
+}
+.hStepItem:hover,
+.hClose:hover {
+	background-color:rgba(0,0,0,0.05);
+}
+
+.hMapJump-disable .hStepItem {
+	cursor: default;
+}
+
+
+.hStepItem:active,
+.hStepItem.hCur,
+.hClose:active {
+	background-color:rgba(0,0,0,0.15);
+}
+
+.hMapJump-disable .hStepItem:hover:not(.hCur) {
+	background:none;
+}
+
+.hAction {
+	float:right;
+}
+.hActionRight {
+	float:right;
+}
+
+.hRoundBtn {
+	float:left;
+	clear:right;
+	width:40px;
+	height:40px;
+	display:block;
+	text-align:center;
+	margin:8px 0;
+	position:relative;
+	z-index:10; 
+	cursor:pointer;
+	border-radius:50%;
+	font:18px/40px Arial, Helvetica, sans-serif;
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	transform:rotate(90deg);
+}
+.hCancelBtn {
+	font-size:27px;
+}
+.hAction .hRoundBtn:last-child {
+	margin-right:8px;
+}
+
+
+
+.hRoundBtn:hover {
+	background-color:rgba(0,0,0,0.05);
+}
+.hRoundBtn:active {
+	background-color:rgba(0,0,0,0.15);
+}
+.hHideMap {
+	width:40px;
+	height:40px;
+	top:5px;
+	right:5px;
+	display:block;
+	text-align:center;
+	float:right;
+	margin:8px;
+	position:absolute;
+	z-index:10; 
+	cursor:pointer;
+	border-radius:50%;
+}
+.hStepNumbers {
+	float:right;
+	white-space:nowrap;
+	padding:0 8px;
+	margin:8px 0;
+	line-height:36px;
+	font-size: 14px;
+}
+.hStepNumber {
+	display:inline-block; 
+	vertical-align:top;
+}
+.hStepNumber:after {
+	content:'/'
+}
+.hStepTotal {
+	display:inline-block; 
+	vertical-align:top;
+}
+.hBtnRight { float:right;}
+
+.startOverlay {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	z-index:999998;
+	opacity:0;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	-ms-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+.startDialog {
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	z-index:999999;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	opacity:0;
+	max-width:600px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.introDialog {
+	position:fixed;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	z-index:999999;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	opacity:0;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.rtl {
+	direction: rtl;
+}
+.startOverlay.hShow {
+	opacity:0.5;
+}
+.startDialog.hShow {
+	opacity:1;
+}
+.introDialog.hShow {
+	opacity:1;
+}
+.hIntroShow .hContPos {
+	display:none;
+}
+
+.hNav-disable .hNavPos,
+.hNav-disable .hNavBtn {
+	display:none !important
+}
+.hErrorMessage {
+	background-color:#FFE1E1;
+	color:#f00;
+	padding:16px;
+	margin-top:1px;
+}
